@@ -119,7 +119,7 @@ function go_install() {
         export GOPATH=/usr/local/go
         export GOCACHE=/root/.cache/go-build
 
-        echo "export PATH=/usr/local/go/bin" >> /root/.profile
+E        echo "export PATH=/usr/local/go/bin" >> /root/.profile
         echo "Golang Install Done !"
 }
 
