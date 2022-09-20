@@ -126,7 +126,7 @@ E        echo "export PATH=/usr/local/go/bin" >> /root/.profile
 function agent_compile() {
         ## Compiling and installing tactical agent from github
         echo "Agent Compile begin"
-        wget -O /tmp/rmmagent.zip "https://github.com/amidaware/rmmagent/archive/refs/heads/master.zip"
+        wget -O /tmp/rmmagent.zip "https://github.com/amidaware/rmmagent/archive/refs/heads/develop.zip"
         unzip /tmp/rmmagent -d /tmp/
         rm /tmp/rmmagent.zip
         cd /tmp/rmmagent-master
