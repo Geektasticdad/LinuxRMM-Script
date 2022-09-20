@@ -146,7 +146,7 @@ function agent_compile() {
         esac
         
         cd /tmp
-        rm -R /tmp/rmmagent-master
+        rm -R /tmp/rmmagent-develop
 }
 
 function update_agent() {
