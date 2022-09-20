@@ -129,7 +129,7 @@ function agent_compile() {
         wget -O /tmp/rmmagent.zip "https://github.com/amidaware/rmmagent/archive/refs/heads/develop.zip"
         unzip /tmp/rmmagent -d /tmp/
         rm /tmp/rmmagent.zip
-        cd /tmp/rmmagent-master
+        cd /tmp/rmmagent-develop
         case $system in
         amd64)
           env CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -o /tmp/temp_rmmagent
