@@ -126,10 +126,10 @@ E        echo "export PATH=/usr/local/go/bin" >> /root/.profile
 function agent_compile() {
         ## Compiling and installing tactical agent from github
         echo "Agent Compile begin"
-        wget -O /tmp/rmmagent.zip "https://github.com/amidaware/rmmagent/archive/refs/heads/develop.zip"
+        wget -O /tmp/rmmagent.zip "https://github.com/amidaware/rmmagent/archive/refs/heads/master.zip"
         unzip /tmp/rmmagent -d /tmp/
         rm /tmp/rmmagent.zip
-        cd /tmp/rmmagent-develop
+        cd /tmp/rmmagent-master
         case $system in
         amd64)
           env CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -o /tmp/temp_rmmagent
@@ -146,7 +146,7 @@ function agent_compile() {
         esac
         
         cd /tmp
-        rm -R /tmp/rmmagent-develop
+        rm -R /tmp/rmmagent-master
 }
 
 function update_agent() {
